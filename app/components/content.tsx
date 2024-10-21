@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react';
-import Sidebar from './sidebar'; // Import the Sidebar component
+import Sidebar from './sidebar'; // Import Sidebar
 
 interface Video {
   id: number;
@@ -11,29 +11,26 @@ interface Video {
 }
 
 interface ContentProps {
-  videos: Video[]; // Accept videos as a prop
+  videos: Video[];
 }
 
 export default function Content({ videos }: ContentProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null); // To track selected category
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   // Extract unique categories from videos
   const categories = Array.from(new Set(videos.map((video) => video.Category)));
 
   return (
     <div className="flex">
-      {/* Render Sidebar */}
       <Sidebar
         categories={categories}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
-
-      {/* Main Content Area */}
+      
       <div className="container mx-auto p-4 flex-grow">
         <h1 className="text-4xl font-bold text-center mb-8">Smart Care Learning Videos</h1>
 
-        {/* Render videos based on selected category */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {videos
             .filter((video) => (selectedCategory ? video.Category === selectedCategory : true))
