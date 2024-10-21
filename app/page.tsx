@@ -6,7 +6,7 @@ import Content from './components/content'; // Import Content component
 interface Video {
   id: number;
   Title: string;
-  Description: string;
+  Description: { text: string }[];
   Link: string;
   Category: string;
 }
