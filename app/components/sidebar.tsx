@@ -4,7 +4,7 @@ export default function SideBar() {
 
     return (
 <div className="flex">
-<div className="h-full w-1/8 text-black">
+<div className="h-full w-1/8 text-black bg-white">
 <div className="p-4">
   <h2 className="text-lg font-bold ">Category</h2>
 </div>
