@@ -2,23 +2,151 @@
   {
     "id": "1",
     "Category": "Login",
-    "Title": "The Future of Healthcare",
-    "Description": "The future of healthcare will bring far-reaching changes but what will it look like? We believe that medicine will become more precise value will shape care delivery patients will become empowered consumers and digitalization will transform every facet of healthcare",
-    "Link": "https://www.youtube.com/embed/jh5U5BnpGN8?si=uKm3M1XQuHDNGU0H"
+    "Title": "Installing Smart Care App on desktop",
+    "Description": [
+      { "text": "Seamless software that works on." },
+      { "text": "- mobile" },
+      { "text": "- tablet" },
+      { "text": "- laptop" },
+      { "text": "- desktop" }
+    ],
+    "Link": "https://www.youtube.com/embed/YG_0l_RXlpk?si=d9DPyuwvcsHZVTfu"
   },
   {
     "id": "2",
-    "Category": "register",
-    "Title": "The Future of Medicine",
-    "Description": "Nanobots that patrol our bodies killer immune cells hunting and destroying cancer cells biological scissors that cut out defective genes: these are just some of the technologies that Cambridge University researchers are developing and which are set to revolutionise medicine in the future. ",
-    "Link": "https://www.youtube.com/embed/ZGGDKC3GlrI?si=69sjo1J6Wfj4puqe"
+    "Category": "Login",
+    "Title": "Logging in and Logging out using laptop/desktop to manage your Practice",
+    "Description": [
+      { "text": "Seamless software that works on." },
+      { "text": "- mobile" },
+      { "text": "- tablet" },
+      { "text": "- laptop" },
+      { "text": "- desktop" }
+    ],
+    "Link":"https://www.youtube.com/embed/aoKNK0W5N4o?si=TvUrUIaa2Yn2er6P"
+  },{
+    "id": "3",
+    "Category": "Login",
+    "Title": "Logging in with phone numner and otp",
+    "Description": [
+      { "text": "Seamless software that works on." },
+      { "text": "- mobile" },
+      { "text": "- tablet" },
+      { "text": "- laptop" },
+      { "text": "- desktop" }
+    ],
+    "Link": "https://www.youtube.com/embed/bev6IOn7PHM?si=Q6Q5uJoiQK3FLcWE" 
+  },
+
+  {
+    "id": "4",
+    "Category": "Setting",
+    "Title": "Adding Holiday settings",
+    "Description": [
+      { "text": "- Holiday settings" },
+      { "text": "- Business name" },
+      { "text": "- business Address" },
+      { "text": "- business hours" },
+      { "text": "- logo" },
+      { "text": "- SMS" },
+      { "text": "- Email" }
+    ],
+    "Link": "https://www.youtube.com/embed/BuADPB9qi2c?si=J2Xj5citpLoV7UKl"
   },
   {
-    "id": "3",
-    "Category": "Enter",
-    "Title": "Nanobots To Cure Cancer",
-    "Description": "In the captivating world of medical innovation tiny yet mighty nanobots are emerging as groundbreaking warriors against cancer and beyond. Injected into human veins these microscopic robots patrol the bloodstream with remarkable precision targeting cancer cells while leaving healthy ones untouched",
-    "Link": "https://www.youtube.com/embed/iPi-QNYgAa4?si=cchBhcJbb_xdsUyh"
+    "id": "5",
+    "Category": "Setting",
+    "Title": "Uploading Dr.Photo and Sigature",
+    "Description": [
+      { "text": "- You can enhance your profile in client portal with uploding photo" },
+      { "text": "- Uplod your signiture to enable you to write the ePrescription and Deliver ePrescription to patient" }
+  
+    ],
+    "Link": "https://www.youtube.com/embed/-XGVWuKe0bE?si=OX0gadu6FC3iLaFe"
+  },
+  {
+    "id": "6",
+    "Category": "New Clients",
+    "Title": "Registering or adding new client/patient",
+    "Description": [
+      { "text": "- Self registration using QR code" },
+      { "text": "- Registration by staff" }
+  
+    ],
+    "Link": "https://www.youtube.com/embed/e_UbZz4QPMA?si=NkOy1Iv15mis5Zrp"
+  },
+  {
+    "id": "7",
+    "Category": "Appointments",
+    "Title": "Allow self booking of appointments using QR code of your client portal",
+    "Description": [
+      { "text": "- Frees up your staff time" },
+      { "text": "- Streamlines the appointment booking process" },
+      { "text": "Give aswome experience to your clients"}
+  
+    ],
+    "Link": "https://www.youtube.com/embed/bSmK1WFcPkw?si=wAMbciRIJfZd86FP"
+  },
+  {
+    "id": "8",
+    "Category": "Appointments",
+    "Title": "Booking Appointments",
+    "Description": [
+      { "text": "Seamless software that works on." },
+      { "text": "- mobile - tab - laptop - desktop" }
+  
+    ],
+    "Link":"https://www.youtube.com/embed/e_UbZz4QPMA?si=GuRKNhqTvqIUdGNO"
+  },
+  {
+    "id": "9",
+    "Category": "EMR",
+    "Title": "Quick eRX",
+    "Description": [
+      { "text": "Quick eRx allows doctors to write priscription by auto booking appointment instantly" }
+  
+    ],
+    "Link":"https://www.youtube.com/embed/qQhqwaSwc-Q?si=LnDu-Owvm_nt6b2f"
+  },
+  {
+    "id": "9",
+    "Category": "EMR",
+    "Title": "Quick eRX",
+    "Description": [
+      { "text": "Quick eRx allows doctors to write priscription by auto booking appointment instantly" }
+  
+    ],
+    "Link":"https://www.youtube.com/embed/qQhqwaSwc-Q?si=LnDu-Owvm_nt6b2f"
+  },
+  {
+    "id": "10",
+    "Category": "Billing",
+    "Title": "",
+    "Description": [
+      { "text": "" }
+  
+    ],
+    "Link":""
+  },
+  {
+    "id": "11",
+    "Category": "Feedback",
+    "Title": "",
+    "Description": [
+      { "text": "" }
+  
+    ],
+    "Link":""
+  },
+  {
+    "id": "12",
+    "Category": "Client Portal",
+    "Title": "",
+    "Description": [
+      { "text": "" }
+  
+    ],
+    "Link":""
   }
   
 ]
