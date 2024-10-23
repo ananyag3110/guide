@@ -56,7 +56,7 @@ export default function Content({ videos }: ContentProps) {
             <p>No videos available in this category.</p>
           </div>
         ) : (
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap gap-4">
             {filteredVideos.map((video) => {
               const isDescriptionVisible = visibleDescriptions.has(video.id);
               

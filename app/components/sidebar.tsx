@@ -46,7 +46,7 @@ const Sidebar = ({ categories, selectedCategory, setSelectedCategory }: SidebarP
             <li
               key={index}
               className={`text-black p-2 cursor-pointer hover:bg-gray-300 rounded-lg ${
-                selectedCategory === category ? 'bg-gray-700' : ''
+                selectedCategory === category ? 'bg-gray-300' : ''
               }`}
               onClick={() => setSelectedCategory(category)}
             >
