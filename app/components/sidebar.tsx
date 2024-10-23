@@ -38,14 +38,14 @@ const Sidebar = ({ categories, selectedCategory, setSelectedCategory }: SidebarP
       <div
         className={`${
           isOpen ? 'block' : 'hidden'
-        } inset-0 bg-gray-800 bg-opacity-75 md:block md:w-64 md:bg-gray-800 md:h-full p-4`}
+        } inset-0 bg-white-800 bg-opacity-75 md:block md:w-64 md:bg-white-800 md:h-full p-4`}
       >
-        <h2 className="text-white text-2xl font-semibold mb-6">Categories</h2>
+        <h2 className="text-black text-2xl font-semibold mb-6">Categories</h2>
         <ul>
           {categories.map((category, index) => (
             <li
               key={index}
-              className={`text-white p-2 cursor-pointer hover:bg-gray-700 rounded-lg ${
+              className={`text-black p-2 cursor-pointer hover:bg-gray-300 rounded-lg ${
                 selectedCategory === category ? 'bg-gray-700' : ''
               }`}
               onClick={() => setSelectedCategory(category)}

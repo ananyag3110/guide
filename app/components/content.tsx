@@ -11,7 +11,7 @@ interface Video {
 }
 
 interface DescriptionItem {
-  text: string; // Structure of each description item
+  text: string;
 }
 
 interface ContentProps {
@@ -21,9 +21,7 @@ interface ContentProps {
 export default function Content({ videos }: ContentProps) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [visibleDescriptions, setVisibleDescriptions] = useState<Set<number>>(new Set());
-  const [visibleTitles, setVisibleTitles] = useState<Set<number>>(new Set());
 
-  // Extract unique categories from videos
   const categories = Array.from(new Set(videos.map((video) => video.Category)));
 
   const toggleDescription = (id: number) => {
@@ -38,35 +36,29 @@ export default function Content({ videos }: ContentProps) {
     });
   };
 
-  const toggleTitle = (id: number) => {
-    setVisibleTitles((prev) => {
-      const newVisible = new Set(prev);
-      if (newVisible.has(id)) {
-        newVisible.delete(id);
-      } else {
-        newVisible.add(id);
-      }
-      return newVisible;
-    });
-  };
+  const filteredVideos = videos.filter((video) =>
+    selectedCategory ? video.Category === selectedCategory : true
+  );
 
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
       <Sidebar
         categories={categories}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
       
-      <div className="container mx-auto p-4 flex-grow">
-        <h1 className="text-4xl font-bold text-center mb-8">Smart Care Learning Videos</h1>
+      <div className="container mx-auto p-4 flex-grow bg-white">
+        <h1 className="text-2xl md:text-4xl font-bold text-center mb-8">Smart Care Learning Videos</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {videos
-            .filter((video) => (selectedCategory ? video.Category === selectedCategory : true))
-            .map((video) => {
+        {filteredVideos.length === 0 ? (
+          <div className="text-center text-gray-500">
+            <p>No videos available in this category.</p>
+          </div>
+        ) : (
+          <div className="flex flex-wrap justify-center gap-4">
+            {filteredVideos.map((video) => {
               const isDescriptionVisible = visibleDescriptions.has(video.id);
-              const isTitleVisible = visibleTitles.has(video.id);
               
               const truncatedDescription = isDescriptionVisible 
                 ? video.Description.map(item => (
@@ -76,41 +68,37 @@ export default function Content({ videos }: ContentProps) {
                     <p key={item.text} className="text-gray-600 mb-2">{item.text}</p>
                   ));
 
-              const truncatedTitle = isTitleVisible ? video.Title : `${video.Title.substring(0, 20)}...`;
-
               return (
-                <div key={video.id} className="bg-white p-6 rounded-lg shadow-lg">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                    {truncatedTitle}
-                    <button 
-                      className="text-blue-500 font-normal text-lg hover:underline ml-2"
-                      onClick={() => toggleTitle(video.id)}
-                    >
-                      {isTitleVisible ? 'Show Less' : 'Read More'}
-                    </button>
-                  </h2>
+                <div key={video.id} className="bg-white p-4 md:p-6 rounded-lg shadow-lg w-full sm:w-[48%] lg:w-[23%]">
+                  
                   <iframe
-                    className="w-full h-64 rounded-lg mt-4"
+                    className="rounded-lg mt-4 w-full h-40 md:h-48"
                     src={video.Link}
                     frameBorder="0"
                     allowFullScreen
                   />
+                  <h2 className="text-md font-medium text-gray-800 mb-4">
+                    {video.Title}
+                  </h2>
                   <div className="mb-4">
                     {truncatedDescription}
                     {!isDescriptionVisible && video.Description.length > 2 && (
                       <p className="text-gray-600 mb-2">...</p>
                     )}
                   </div>
-                  <button 
-                    className="text-blue-500 hover:underline"
-                    onClick={() => toggleDescription(video.id)}
-                  >
-                    {isDescriptionVisible ? 'Show Less' : 'Read More'}
-                  </button>
+                  <div className='flex justify-between'>
+                    <button 
+                      className="text-blue-500 hover:underline"
+                      onClick={() => toggleDescription(video.id)}
+                    >
+                      {isDescriptionVisible ? 'Show Less' : 'Read More'}
+                    </button>
+                  </div>
                 </div>
               );
             })}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

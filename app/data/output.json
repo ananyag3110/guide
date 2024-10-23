@@ -107,46 +107,7 @@
   
     ],
     "Link":"https://www.youtube.com/embed/qQhqwaSwc-Q?si=LnDu-Owvm_nt6b2f"
-  },
-  {
-    "id": "9",
-    "Category": "EMR",
-    "Title": "Quick eRX",
-    "Description": [
-      { "text": "Quick eRx allows doctors to write priscription by auto booking appointment instantly" }
-  
-    ],
-    "Link":"https://www.youtube.com/embed/qQhqwaSwc-Q?si=LnDu-Owvm_nt6b2f"
-  },
-  {
-    "id": "10",
-    "Category": "Billing",
-    "Title": "",
-    "Description": [
-      { "text": "" }
-  
-    ],
-    "Link":""
-  },
-  {
-    "id": "11",
-    "Category": "Feedback",
-    "Title": "",
-    "Description": [
-      { "text": "" }
-  
-    ],
-    "Link":""
-  },
-  {
-    "id": "12",
-    "Category": "Client Portal",
-    "Title": "",
-    "Description": [
-      { "text": "" }
-  
-    ],
-    "Link":""
   }
+
   
 ]
